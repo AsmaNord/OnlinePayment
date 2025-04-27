@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement en Ligne</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo Workshop" class="logo">
+        <h1>Paiement en Ligne</h1>
+        <p>Finalisez votre inscription en effectuant le paiement</p>
+    </header>
+    <label class="switch">
+        <input type="checkbox" id="switch-input">
+        <svg class="light-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+          <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/>
+        </svg>
+      
+        <svg class="dark-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+          <path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/>
+        </svg>
+      </label>
+    <div class="form-container">
+        <form>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Mode de paiement :</label>
+            <div class="payment-options">
+                <label>
+                    <input type="radio" name="payment" value="visa" required>
+                    <img src="visa.jpg" alt="Visa">
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="mastercard">
+                    <img src="mastercard.jpg" alt="Mastercard">
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="paypal">
+                    <img src="paypal.jpg" alt="PayPal">
+                </label>
+            </div>
+
+            <label for="card-number">Numéro de carte :</label>
+            <input type="text" id="card-number" name="card-number" required>
+
+            <label for="expiry-date">Date d'expiration :</label>
+            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA" required>
+
+            <label for="cvv">CVV :</label>
+            <input type="text" id="cvv" name="cvv" required>
+
+            <button type="submit">Payer</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2025 - Workshop Tech</p>
+    </footer>
+</body>
+</html>

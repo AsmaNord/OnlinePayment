@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    text-align: center;
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+} 
+
+/* Dark mode styles when switch is checked */
+body:has(.switch input:checked) {
+    background: linear-gradient(to right, #2c3e50, #3498db);
+}
+
+/* Form container dark mode */
+body:has(.switch input:checked) .form-container {
+    background: #2c3e50;
+    color: white;
+}
+
+/* Input fields light mode */
+input, select {
+    background: white;
+    color: #333;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+/* Input fields dark mode */
+body:has(.switch input:checked) input,
+body:has(.switch input:checked) select {
+    background: #34495e;
+    color: white;
+    border-color: #456789;
+}
+
+/* Header and footer dark mode */
+body:has(.switch input:checked) header,
+body:has(.switch input:checked) footer {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Button light mode */
+button {
+    background: #4facfe;
+    transition: all 0.3s ease;
+}
+
+/* Button dark mode */
+body:has(.switch input:checked) button {
+    background: #3498db;
+}
+
+body:has(.switch input:checked) button:hover {
+    background: #2980b9;
+}
+
+/* Payment options border color in dark mode */
+body:has(.switch input:checked) .payment-options input:checked + img {
+    border-color: #3498db;
+}
+
+/* Form container light mode */
+.form-container {
+    background: white;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.payment-options label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.payment-options input {
+    display: none;
+}
+
+.payment-options img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.payment-options label:hover img {
+    transform: scale(1.1);
+}
+
+.payment-options input:checked + img {
+    border: 2px solid blue;
+    border-radius: 5px;
+}
+
+header {
+    text-align: center;
+    padding: 100px 20px 15px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 180px;
+    position: relative;
+}
+
+.switch{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+}
+
+.switch input {
+    display: none;
+}
+  
+.switch .dark-icon {
+    display: none;
+}
+  
+.switch input:checked ~ .light-icon {
+    display: none;
+}
+  
+.switch input:checked ~ .dark-icon {
+    display: inline;
+}
+
+
+.switch:hover{
+    cursor: pointer;
+}
+
+/* This selector matches a body element that has a .switch input checked */
+body:has(input:checked) {
+    background-color: violet;
+}
+  
+  
+
+.logo {
+    width: 100px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+} 
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+header p {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    color: black;
+    margin-top: 20px;
+} 
+
+label { 
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+            
+
+input, select {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #4facfe;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #00c6fb;
+}
+                
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
